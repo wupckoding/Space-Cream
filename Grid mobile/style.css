@@ -59,6 +59,7 @@ header .logo {
 
 main {
    padding: 1.4rem 3.2rem;
+   
 }
 
 
@@ -109,9 +110,32 @@ main  span {
 .fixar { 
   width: 32rem;
   position: relative;
-  margin: auto; 
+  margin: auto;
   transition: 200ms transform;
+  animation: downtop 1500ms backwards;
+
   
+
+}
+
+img {
+  border-radius: 20px;
+  width: 100%;
+  
+  
+}
+
+@keyframes downtop {
+
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 }
 
@@ -125,7 +149,7 @@ main  span {
 
   0% {
     opacity: 0;
-    transform: translateY(-15px);
+    transform: translateY(-20px);
   }
 
   100% {
@@ -137,9 +161,178 @@ main  span {
 
 .section {
 
-  display:flex;
-  flex-direction: column;
-  gap: 3.2rem;
+  display: grid;
+  gap: 2.2rem;
 }
 
+@media (max-width: 1279px) {
+
+  footer {
+    display: none;
+  }
+  
+
+  main p:nth-child(1) {
+
+    display: none;
+  }
+}
+
+
+@media (min-width: 1280px) {
+
+
+  :root {
+
+    --ff-p: 'Roboto';
+    --fc-p:var(--fc-h1);
+
+  }
+
+ header {
+
+  width: 37.7rem;
+  height: 72.0rem;
+  position: relative;  
+
+}
+
+ header h1 {
+
+    height: 7.0rem;
+    padding: 2rem 2rem;
+ }
+
+
+
+
+
+ main .section {
+  
+  
+  height: 53.1vh;
+  position: absolute;
+  top: 2.4rem;
+  left: 42.5rem;
+  display: grid;
+  
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
+  grid-template-areas:  'A B C'  
+                        'D B F'  
+                        'D E F';
+  
+ }
+
+ .sorv {
+  width: 100%;
+  border-radius: 20px;
+  height: 100%;
+ }
+
+ #img1 {
+  grid-area: A;
+  
+ }
+
+ #img2 {
+  grid-area: B;
+  
+ }
+
+ #img3 {
+  grid-area: C;
+  
+ }
+
+
+ #img4 {
+  grid-area: D;
+  
+ }
+
+ #img5 {
+  grid-area: E;
+  
+ }
+
+ #img6 {
+  grid-area: F;
+  
+ }
+
+
+
+
+ main p:nth-child(2) {
+
+  display: none;
+
+ }
+
+ .text-1 {
+
+  font-family: var(--ff-p);
+  color: var(--fc-p);
+  font-size: 1.9rem;
+  line-height: 2.0rem;
+  font-weight: 400;
+/* or 83% */
+
+  position: absolute;
+  top: 31.3rem;
+  width: 29.5rem;
+
+  align-items: center;
+  text-align: center;
+  
+}
+
+.fixar {
+  margin: 0;
+}
+
+.foot {
+
+  margin: auto;
+  text-align: center;
+}
+.foot {
+  position: absolute;
+  left: 35rem;
+  bottom: -100px;
+  
+
+}
+
+footer  {
+
+  
+  font-family: var(--ff-p);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #4A4E69;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+ 
+  
+ 
+  
+}
+
+footer a {
+
+  text-decoration: none;
+  color: #4A4E69;
+  font-weight: bold;
+  
+
+
+  
+  
+}
+}
 
